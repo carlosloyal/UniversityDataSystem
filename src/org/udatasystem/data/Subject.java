@@ -8,8 +8,14 @@ public class Subject {
     private String classroom;
     private List<Student> studentsList;
 
+    private Teacher teacher;
 
-    public Subject() {
+
+    public Subject(String name, String classroom, List<Student> studentsList, Teacher teacher) {
+        this.name = name;
+        this.classroom = classroom;
+        this.studentsList = studentsList;
+        this.teacher = teacher;
     }
 
     public String getName() {
@@ -34,5 +40,13 @@ public class Subject {
 
     public void setStudentsList(List<Student> studentsList) {
         this.studentsList = studentsList;
+    }
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 }
