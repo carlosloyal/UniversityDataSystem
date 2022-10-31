@@ -41,7 +41,7 @@ public class DataInitializer {
          Subject subject1 = new Subject("Math","401", university.getStudentsList().subList(0,5), university.getTeachersList().get(0));
          Subject subject2 = new Subject("Chemistry","402", university.getStudentsList().subList(0,5), university.getTeachersList().get(1));
          Subject subject3 = new Subject("History","403", university.getStudentsList().subList(0,5), university.getTeachersList().get(3));// Sublist: subdividir una lista(0,0) lista de posiciones
-         Subject subject4 = new Subject("Programming","404", university.getStudentsList().subList(0,5), university.getTeachersList().get(4));
+         Subject subject4 = new Subject("Programming","404", university.getStudentsList().subList(0,5), university.getTeachersList().get(2));
          university.getSubjectsList().add(subject1);
          university.getSubjectsList().add(subject2);
          university.getSubjectsList().add(subject3);
