@@ -12,7 +12,7 @@ public class Subject {
     private Teacher teacher;
 
     public Subject() {
-        this.studentsList = new ArrayList<Student>();
+        this.studentsList = new ArrayList<Student>(); // List contructor, creates a new empty students list
     }
 
     public Subject(String name, String classroom, List<Student> studentsList, Teacher teacher) {

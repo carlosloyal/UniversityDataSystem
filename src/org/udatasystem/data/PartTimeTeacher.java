@@ -4,12 +4,12 @@ public class PartTimeTeacher extends Teacher {
 
     private double hoursWeek;
 
-
+// Consrtructor
     public PartTimeTeacher(int teacherId, String fullName, double salary, double hoursWeek) {
         super(teacherId, fullName, salary);
         this.hoursWeek = hoursWeek;
     }
-
+ // Getters and setters
     public double getHoursWeek() {
         return hoursWeek;
     }
