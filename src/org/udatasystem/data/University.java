@@ -9,7 +9,7 @@ public class University {
     private List<Subject> subjectsList;
     private List<Teacher> teachersList;
 
-    public University() {
+    public University() { // create list
         this.studentsList = new ArrayList<Student>();
         this.subjectsList = new ArrayList<Subject>();
         this.teachersList = new ArrayList<Teacher>();
@@ -17,9 +17,9 @@ public class University {
 
     public String teachersToString() {
         String text = "----------------------------- Teachers -----------------------------";
-        for (int i = 0; i < this.teachersList.size(); i++) {
+        for (int i = 0; i < this.teachersList.size(); i++) { // It scrolls through the list positions, (i++) top up until reaches the size of the list -1.
             Teacher teacher = this.teachersList.get(i);
-            text += "\n" + (i+1) + ". Id: " + teacher.getTeacherId() + "\tName: " + teacher.getFullName() + "\tSarary: " + teacher.getSalary();
+            text += "\n" + (i+1) + ". Id: " + teacher.getTeacherId() + "\tName: " + teacher.getFullName() + "\tSarary: " + teacher.getSalary(); //\t Like pressing tab key
             if (teacher instanceof FullTimeTeacher) {
                 text += "\tExp. years: " + ((FullTimeTeacher) teacher).getExperienceYears();
             } else {
@@ -65,13 +65,13 @@ public class University {
                 "\nStudents:" + students;
     }
 
-    public Student searchStudentById(int id) {
+    public Student searchStudentById(int id) {  // Receive as an argument (Id), and look for the student by using an ID
         for (int i = 0; i < this.studentsList.size(); i++) {
-            if (this.studentsList.get(i).getStudentId() == id) {
+            if (this.studentsList.get(i).getStudentId() == id) { // (i) position variable that stars in 0
                 return this.studentsList.get(i);
             }
         }
-        return null;
+        return null; // Null when did not find the Id
     }
 
     public List<Subject> studentSubjects(int id) {

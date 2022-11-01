@@ -2,7 +2,7 @@ package org.udatasystem.persitance;
 
 import org.udatasystem.data.*;
 
-// Capa de persistencia para cargar la informacion
+// Persistence layer to load the information
 public class DataInitializer {
     public static University loadUniversity(){
         University university = new University();

@@ -1,20 +1,21 @@
 package org.udatasystem.view;
-
+// Dependencies imports mandatory
 import org.udatasystem.data.Student;
 import org.udatasystem.data.Subject;
 import org.udatasystem.data.University;
 import org.udatasystem.persitance.DataInitializer;
 import java.util.List;
 import java.util.Scanner;
-
+// By using the main class we initialize the execution of the program
+// an instance is the creation of an object of a class.
 public class Main {
     public static void main(String[] args) {
         University uni = DataInitializer.loadUniversity();
         System.out.println("Welcome to the University system");
-        boolean flag = true;
-        while (flag) {
+        boolean flag = true; // control variable, it is used to control the execution of the loop, and for an input.
+        while (flag) { // ask for a selection of menu options
             int choice = printMenu();
-            switch (choice) {
+            switch (choice) { // flow controller that allows execute the different methods depending on users input.
                 case 1:
                     listTeachers(uni);
                     break;
@@ -40,7 +41,7 @@ public class Main {
 
 
     }
-
+    // Method that allows print the information
     public static int printMenu() {
         Scanner scan = new Scanner(System.in);
         while (true) {
@@ -53,7 +54,7 @@ public class Main {
                     "\n 6. Exit" +
                     "\n----------------------------------------------------------------");
             String input = scan.nextLine();
-            try {
+            try {  // erros management it shows a message if something is wrong
                 int choice = Integer.parseInt(input);
                 if (choice < 1 || choice > 6) {
                     System.out.print("-------------------------- Invalid option -------------------------\nPlease, type a number between 1 to 6 to continue");
@@ -129,7 +130,7 @@ public class Main {
         while (true) {
             String input = scanString.nextLine();
             try {
-                choice = Integer.parseInt(input);
+                choice = Integer.parseInt(input); // ParseInt is used to Convert String to Int
                 if (choice < 1 || choice > uni.getTeachersList().size()) {
                     System.out.println("-------------------------- Invalid option -------------------------\nPlease, type a number between 1 to " + uni.getTeachersList().size());
                     continue;
